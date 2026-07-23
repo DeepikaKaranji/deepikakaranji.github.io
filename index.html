@@ -202,6 +202,42 @@
     font-size:14.5px; color:var(--ink-soft);
   }
   .side-note strong{color:var(--ink); font-family:'IBM Plex Mono', monospace; font-weight:500; font-size:12px; text-transform:uppercase; letter-spacing:0.04em;}
+  .agent-pipeline{list-style:none; margin:18px 0; padding:0; counter-reset:agent;}
+  .agent-pipeline li{
+    counter-increment:agent; position:relative;
+    padding:0 0 16px 34px; margin-bottom:0;
+    border-left:1px solid var(--line-strong);
+    font-size:14.5px; color:var(--ink-soft);
+  }
+  .agent-pipeline li:last-child{border-left-color:transparent; padding-bottom:0;}
+  .agent-pipeline li::before{
+    content:counter(agent);
+    position:absolute; left:-14px; top:-2px;
+    width:26px; height:26px; border-radius:50%;
+    background:var(--paper-raised); border:1.5px solid var(--accent-ink); color:var(--accent-ink);
+    font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:500;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .agent-pipeline strong{color:var(--ink); font-family:'Space Grotesk', sans-serif; font-weight:600;}
+  .subhead-label{
+    font-family:'IBM Plex Mono', monospace; font-size:11.5px; text-transform:uppercase;
+    letter-spacing:0.05em; color:var(--accent-ink); margin:16px 0 6px;
+  }
+  .expand-block{margin:14px 0 18px;}
+  .expand-block summary{
+    font-family:'IBM Plex Mono', monospace; font-size:12.5px;
+    color:var(--accent-ink); cursor:pointer; text-decoration:underline;
+    text-underline-offset:3px; list-style:none; display:inline-flex; align-items:center; gap:6px;
+  }
+  .expand-block summary::-webkit-details-marker{display:none;}
+  .expand-block summary::before{
+    content:'+'; display:inline-flex; align-items:center; justify-content:center;
+    width:16px; height:16px; border:1px solid var(--accent-ink); border-radius:50%;
+    font-size:11px; line-height:1; flex-shrink:0; transition:transform .2s ease;
+  }
+  .expand-block[open] summary::before{content:'–'; transform:rotate(0deg);}
+  .expand-block summary:hover{color:var(--ink);}
+  .expand-content{margin-top:16px; padding-top:4px;}
 
   /* ---------- HOW I WORK ---------- */
   .principles{display:grid; grid-template-columns:repeat(4,1fr); gap:26px;}
@@ -398,6 +434,38 @@
               <span class="chip">Codex</span>
               <span class="chip">Python</span>
               <span class="chip">Data Pipelines</span>
+              <span class="chip">Developer Tooling</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-card reveal">
+          <div class="work-meta">
+            <div class="tag">FOUNDING PM</div>
+            <div>Disarray AI</div>
+          </div>
+          <div class="work-body">
+            <h3>Leads Engine - Agentic Workflow for GTM</h3>
+            <p>As founding PM, I also led GTM strategy. Ahead of presenting at HumanX, I needed to turn attendance into actual customer leads — with 350+ speakers on the roster, that meant knowing who was worth approaching, whether we had a warm path to them, and what to say once we did. Doing it manually meant hours of repetitive research: pulling each person's interests, prepping personalized pitches, and cross-checking founder connections for warm intros. So <strong>I built an agentic workflow</strong> — five agents, with one human-in-the-loop step where it mattered most.</p>
+            <details class="expand-block">
+              <summary>Learn more: How I did Agentic Workflow Orchestration</summary>
+              <div class="expand-content">
+                <ol class="agent-pipeline">
+                  <li><strong>Scout</strong> scored all 350+ speakers against explicit criteria (seniority, relevance, topic overlap), cutting the list to 48. I manually reviewed founder LinkedIn connections against that shortlist to flag warm-intro paths — that step stayed human because judging relationship strength isn't something I trusted an agent to get right, and LinkedIn's lack of a scraping-friendly API made it a non-starter anyway.</li>
+                  <li><strong>Researcher</strong> pulled each person's YouTube talks and interviews from the last one to five months, so every dossier reflected what they're focused on now, not years-old content.</li>
+                  <li><strong>Analyst</strong> queried each video directly with Gemini on three fixed questions: what does this person care about, what are they excited by, what are they currently working on.</li>
+                  <li><strong>Editor</strong> merged the outputs into a clean, per-person dossier.</li>
+                  <li><strong>QA</strong> flagged any answer that looked unsupported by the actual video for a quick manual check.</li>
+                </ol>
+                <p>Each agent's output fed the next as structured data, so a failure at one stage never wasted the work done earlier. What would normally take a team days happened in an afternoon — going into HumanX, I had 48 warm, specific conversations queued up instead of a name badge and small talk. The pattern holds beyond GTM: find the manual step nobody questions, decide deliberately where human judgment still belongs, and let agents run the rest.</p>
+              </div>
+            </details>
+            <div class="chip-row">
+              <span class="chip">Multi-Agent Systems</span>
+              <span class="chip">Gemini</span>
+              <span class="chip">AI Tooling</span>
+              <span class="chip">GTM</span>
+              <span class="chip">Human-in-the-Loop</span>
             </div>
           </div>
         </div>
@@ -415,6 +483,7 @@
               <span class="chip">HIPAA</span>
               <span class="chip">Healthcare</span>
               <span class="chip">0–1 Discovery</span>
+              <span class="chip">Developer Tooling</span>
             </div>
           </div>
         </div>
