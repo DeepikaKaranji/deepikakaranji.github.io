@@ -185,6 +185,12 @@
   .work-meta{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-soft); line-height:1.7;}
   .work-meta .tag{color:var(--accent-ink);}
   .work-body h3{font-size:21px; margin-bottom:10px;}
+  .tool-line{
+    font-family:'IBM Plex Mono', monospace; font-size:12px;
+    color:var(--rust); margin:0 0 12px; display:flex; align-items:center; gap:6px;
+  }
+  .tool-line svg{width:14px; height:14px; flex-shrink:0;}
+  .tool-line strong{font-weight:500; color:var(--rust);}
   .work-body p{color:var(--ink-soft); max-width:64ch; margin:0 0 14px;}
   .chip-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:6px;}
   .chip{
@@ -210,6 +216,14 @@
   .principle svg{width:30px; height:30px; color:var(--accent-ink); margin-bottom:14px;}
   .principle h3{font-size:16px; margin-bottom:8px;}
   .principle p{font-size:14.5px; color:var(--ink-soft); margin:0;}
+  .toolkit-row{
+    margin-top:40px; padding-top:28px; border-top:1px solid var(--line);
+    display:flex; align-items:center; flex-wrap:wrap; gap:10px;
+  }
+  .toolkit-label{
+    font-family:'IBM Plex Mono', monospace; font-size:11.5px; text-transform:uppercase;
+    letter-spacing:0.06em; color:var(--ink-soft); margin-right:6px;
+  }
 
   /* ---------- TIMELINE ---------- */
   .timeline{position:relative; padding-left:26px; border-left:1px solid var(--line-strong);}
@@ -301,9 +315,9 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="eyebrow">Product Builder — AI · ML Platforms · Distributed Systems</p>
+        <p class="eyebrow">Agentic AI Product Builder — Claude Code · Codex · Cursor · Lovable</p>
         <h1>Deepika<br>Karanji</h1>
-        <p class="lede">I build and ship AI-native products end-to-end — from prototype to production — with hands-on engineering roots and enterprise-scale product judgment.</p>
+        <p class="lede">I build and ship AI-native products end-to-end — prompting, prototyping, and shipping to production with agentic coding tools — backed by hands-on engineering roots and enterprise-scale product judgment.</p>
         <p class="stamp-line"><span>Founding PM, Disarray AI</span> · <span>Ex-AWS</span> · <span>Ex-Walmart</span> · <span>Dartmouth College, Masters in Engineering Management</span></p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#work">See the work</a>
@@ -360,7 +374,7 @@
       <div class="section-head reveal">
         <p class="eyebrow">Selected work</p>
         <h2>Products I've built and shipped</h2>
-        <p>With 3+ years of work experience — from 0-1 platform roadmaps at venture-backed startups to enterprise infrastructure at AWS and Walmart, plus a handful of things I built just because I wanted them to exist.</p>
+        <p>Having worked as an SDE for 3+ years, I enjoy getting hands-on with Agentic AI tools, and have shipped several projects from concept to production. From 0-1 platform roadmaps at venture-backed startups to enterprise infrastructure at AWS and Walmart.</p>
       </div>
 
       <div class="work-list">
@@ -369,11 +383,11 @@
           <div class="work-meta">
             <div class="tag">FOUNDING PM</div>
             <div>Disarray AI</div>
-            <div>Feb – Jun 2026</div>
           </div>
           <div class="work-body">
             <h3>Context Graph — Agentic ML Engineering Platform</h3>
-            <p>Owned the 0-1 roadmap for an agentic ML engineering platform backed by Databricks and Perplexity's founders. Led the pivot of Context Graph from a visual interface to a conversational one, grounded in customer interaction analysis — improving query response accuracy by 50%. Shipped two platform launches using Claude Code and Codex to prototype and validate fast, and designed a self-serve CXO dashboard that drove a 12% engagement lift.</p>
+            <p class="tool-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>Built with <strong>Claude Code</strong> + <strong>Codex</strong></p>
+            <p>Owned the 0-1 roadmap for an agentic ML engineering platform backed by Databricks and Perplexity's founders. Prompted and prototyped directly in Claude Code and Codex to pivot Context Graph from a visual interface to a conversational one, grounded in customer interaction analysis — improving query response accuracy by 50%. Shipped two platform launches this way, iterating live against customer feedback, and designed a self-serve CXO dashboard that drove a 12% engagement lift.</p>
             <div class="chip-row">
               <span class="chip">Agent Orchestration</span>
               <span class="chip">LLMs</span>
@@ -385,32 +399,12 @@
 
         <div class="work-card reveal">
           <div class="work-meta">
-            <div class="tag">PRODUCT BUILDER CONSULTANT</div>
-            <div>Kaleido / Paladin</div>
-            <div>Blockchain · Fintech</div>
-          </div>
-          <div class="work-body">
-            <h3>Electronic Bill of Lading on Paladin Blockchain</h3>
-            <p>Built an interactive demo of a multi-party electronic Bill of Lading workflow on Paladin blockchain — modeling privacy groups across carrier, shipper, bank, and consignee, with smart contracts governing document mint, transfer, and burn through the full trade-finance lifecycle.</p>
-            <div class="chip-row">
-              <span class="chip">Blockchain</span>
-              <span class="chip">Smart Contracts</span>
-              <span class="chip">Trade Finance</span>
-              <span class="chip">Privacy Groups</span>
-            </div>
-            <a class="work-link" href="https://deepikakaranji.github.io/Paladin-demo/" target="_blank" rel="noopener">Explore Project →</a>
-          </div>
-        </div>
-
-        <div class="work-card reveal">
-          <div class="work-meta">
             <div class="tag">SENIOR TECHNICAL PRODUCT MANAGER (L6)</div>
             <div>Amazon Web Services</div>
-            <div>Jun – Sep 2025</div>
           </div>
           <div class="work-body">
-            <h3>Amazon Verified Permissions — Healthcare Vertical</h3>
-            <p>Owned 0-1 product discovery for policy-based access control in healthcare consent management, uncovering a $50M growth opportunity from 25+ customer interviews. Benchmarked 7 competitors' HIPAA-compliant data lakes, defined 4 MVP capabilities that cut compliance costs by 89%, and secured director-level buy-in to pull the healthcare vertical a year ahead of plan.</p>
+            <h3>Amazon Verified Permissions — Automated Reasoning technology with AI</h3>
+            <p>Led 0-1 product discovery for Automated Reasoning technology with AI, uncovering a $50M growth opportunity in heavily regulated healthcare consent management, informed by 25+ customer interviews. Benchmarked 7 competitors' HIPAA-compliant data lakes, defined 4 MVP capabilities that cut compliance costs by 89%, and <a href="https://www.linkedin.com/in/deepika-karanji/details/recommendations/" target="_blank" rel="noopener">secured director-level buy-in</a> to pull the healthcare vertical a year ahead of plan.</p>
             <div class="chip-row">
               <span class="chip">Access Control</span>
               <span class="chip">HIPAA</span>
@@ -424,10 +418,9 @@
           <div class="work-meta">
             <div class="tag">SOFTWARE DEVELOPMENT ENGINEER</div>
             <div>Walmart</div>
-            <div>2021</div>
           </div>
           <div class="work-body">
-            <h3>More for Less — Spark Driver App Gamification</h3>
+            <h3>Walmart MoreForLess: Clustering-based smart driver routing with agentic workflows for earnings gamification</h3>
             <p>Identified delivery partner engagement gaps through web-scraping 300+ user reviews and designed the winning AI-powered gamification solution to boost successful deliveries — a hackathon win that shipped into production on Walmart's Spark Driver App, letting drivers set personal earnings targets automatically matched to high-profitability order recommendations. Earned a MacBook Pro M1 and <a href="https://drive.google.com/file/d/1UCkn7gDTFO9aBrirlMnyOoNEAEXV6f8q/view?usp=sharing" target="_blank" rel="noopener">national media coverage</a>.</p>
             <div class="chip-row">
               <span class="chip">Gamification</span>
@@ -442,12 +435,52 @@
         <div class="work-card reveal">
           <div class="work-meta">
             <div class="tag">FEATURED PROJECT</div>
+            <div>AskPerplexity Bot</div>
+            <div>Discord · AI Search</div>
+          </div>
+          <div class="work-body">
+            <h3>AskPerplexity Discord Bot</h3>
+            <p class="tool-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>Built with <strong>Gemini</strong>, self-taught via YouTube</p>
+            <p>A Discord bot that answers questions in real time using Perplexity's web-search-enabled model — built to keep a conversation's references flowing without breaking momentum for a Google search. Coded with Gemini as a pair-programmer, learning the Discord API from scratch via YouTube. Handles long responses by auto-splitting across messages, with built-in error handling for API failures.</p>
+            <div class="chip-row">
+              <span class="chip">Discord API</span>
+              <span class="chip">Perplexity Sonar</span>
+              <span class="chip">Python</span>
+            </div>
+            <a class="work-link" href="https://github.com/DeepikaKaranji/AskPerplexity-DiscordBot" target="_blank" rel="noopener">Explore Project →</a>
+          </div>
+        </div>
+
+        <div class="work-card reveal">
+          <div class="work-meta">
+            <div class="tag">PRODUCT BUILDER CONSULTANT</div>
+            <div>Kaleido / Paladin</div>
+            <div>Blockchain · Fintech</div>
+          </div>
+          <div class="work-body">
+            <h3>Electronic Bill of Lading on Paladin Blockchain</h3>
+            <p class="tool-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>Built with <strong>Claude Code</strong> + <strong>Gemini</strong> (visuals)</p>
+            <p>Built an interactive demo of a multi-party electronic Bill of Lading workflow on Paladin blockchain end-to-end in Claude Code, with Gemini generating the visual assets — modeling privacy groups across carrier, shipper, bank, and consignee, with smart contracts governing document mint, transfer, and burn through the full trade-finance lifecycle.</p>
+            <div class="chip-row">
+              <span class="chip">Blockchain</span>
+              <span class="chip">Smart Contracts</span>
+              <span class="chip">Trade Finance</span>
+              <span class="chip">Privacy Groups</span>
+            </div>
+            <a class="work-link" href="https://deepikakaranji.github.io/Paladin-demo/" target="_blank" rel="noopener">Explore Project →</a>
+          </div>
+        </div>
+
+        <div class="work-card reveal">
+          <div class="work-meta">
+            <div class="tag">FEATURED PROJECT</div>
             <div>EcoLens</div>
             <div>Dartmouth Graduate Energy Fellowship</div>
           </div>
           <div class="work-body">
             <h3>EcoLens — AI-Powered Carbon Footprint Analysis</h3>
-            <p>An AI tool that identifies products from a photo — a single item or a batch of up to ten — and returns verified carbon footprint data, so making a sustainable choice takes seconds instead of an afternoon of research.</p>
+            <p class="tool-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>Built with <strong>Codex</strong></p>
+            <p>An AI tool that identifies products from a photo — a single item or a batch of up to ten — and returns verified carbon footprint data, so making a sustainable choice takes seconds instead of an afternoon of research. Prototyped and shipped solo in Codex as part of a Dartmouth graduate energy fellowship.</p>
             <div class="chip-row">
               <span class="chip">Computer Vision</span>
               <span class="chip">Sustainability</span>
@@ -469,31 +502,14 @@
           </div>
           <div class="work-body">
             <h3>Nostalgia (Chronos Query) — Talk to Your Past</h3>
-            <p>A semantic search tool over your own chat history — ask a question in plain language and it surfaces the exact past conversation, no scrolling through months of messages to find a memory.</p>
+            <p class="tool-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>Built with <strong>Lovable</strong></p>
+            <p>A semantic search tool over your own chat history — ask a question in plain language and it surfaces the exact past conversation, no scrolling through months of messages to find a memory. Built end-to-end in Lovable, from idea to a live, shareable product.</p>
             <div class="chip-row">
               <span class="chip">Semantic Search</span>
               <span class="chip">RAG</span>
               <span class="chip">Personal AI</span>
             </div>
             <a class="work-link" href="https://chronos-query.lovable.app/" target="_blank" rel="noopener">Explore Project →</a>
-          </div>
-        </div>
-
-        <div class="work-card reveal">
-          <div class="work-meta">
-            <div class="tag">FEATURED PROJECT</div>
-            <div>AskPerplexity Bot</div>
-            <div>Discord · AI Search</div>
-          </div>
-          <div class="work-body">
-            <h3>AskPerplexity Discord Bot</h3>
-            <p>A Discord bot that answers questions in real time using Perplexity's web-search-enabled model — built to keep a conversation's references flowing without breaking momentum for a Google search. Handles long responses by auto-splitting across messages, with built-in error handling for API failures.</p>
-            <div class="chip-row">
-              <span class="chip">Discord API</span>
-              <span class="chip">Perplexity Sonar</span>
-              <span class="chip">Python</span>
-            </div>
-            <a class="work-link" href="https://github.com/DeepikaKaranji/AskPerplexity-DiscordBot" target="_blank" rel="noopener">Explore Project →</a>
           </div>
         </div>
 
@@ -506,13 +522,13 @@
     <div class="wrap">
       <div class="section-head reveal">
         <p class="eyebrow">How I work</p>
-        <h2>Operating principles</h2>
+        <h2>I build with agents, not just for them</h2>
       </div>
       <div class="principles">
         <div class="principle reveal">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
-          <h3>Prototype fast</h3>
-          <p>I use AI-native tools — Claude Code, Codex — to go from idea to a working prototype in days, not sprints.</p>
+          <h3>Prototype in the agent</h3>
+          <p>Claude Code, Codex, Cursor, and Lovable take me from idea to a working product in days, not sprints — I prompt, review, and ship directly.</p>
         </div>
         <div class="principle reveal">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>
@@ -529,6 +545,14 @@
           <h3>Operate at scale</h3>
           <p>Grounded in distributed systems and cloud infrastructure from AWS and Walmart, so what I build holds up in production.</p>
         </div>
+      </div>
+      <div class="toolkit-row reveal">
+        <span class="toolkit-label">My toolkit</span>
+        <span class="chip">Claude Code</span>
+        <span class="chip">Codex</span>
+        <span class="chip">Cursor</span>
+        <span class="chip">Lovable</span>
+        <span class="chip">Gemini</span>
       </div>
     </div>
   </section>
