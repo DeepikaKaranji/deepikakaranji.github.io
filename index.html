@@ -193,10 +193,14 @@
     padding:4px 11px; color:var(--ink-soft);
   }
   .work-link{
-    font-family:'IBM Plex Mono', monospace; font-size:12.5px;
+    font-family:'IBM Plex Mono', monospace; font-size:12.5px; font-weight:600;
     color:var(--accent-ink); text-decoration:underline; text-underline-offset:3px; display:inline-flex; align-items:center; gap:5px; margin-top:6px;
   }
   .work-link:hover{color:var(--ink);}
+  .work-body p a, .pub-card p a{
+    color:var(--accent-ink); font-weight:700; text-decoration:underline; text-underline-offset:2px;
+  }
+  .work-body p a:hover, .pub-card p a:hover{color:var(--ink);}
   .side-note{
     margin-top:8px; padding-top:24px; border-top:1px dashed var(--line-strong);
     font-size:14.5px; color:var(--ink-soft);
@@ -494,7 +498,7 @@
             <div>Walmart</div>
           </div>
           <div class="work-body">
-            <h3>Walmart MoreForLess: Clustering-based smart driver routing with agentic workflows for earnings gamification</h3>
+            <h3>Walmart MoreForLess: Clustering-based smart driver routing</h3>
             <p>Identified delivery partner engagement gaps through web-scraping 300+ user reviews and designed the winning AI-powered gamification solution to boost successful deliveries — a hackathon win that shipped into production on Walmart's Spark Driver App, letting drivers set personal earnings targets automatically matched to high-profitability order recommendations.</p>
             <div class="chip-row">
               <span class="chip">Gamification</span>
